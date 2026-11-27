@@ -22,6 +22,16 @@ def kama(s, n=10, fast=2, slow=30):
         out.iloc[i]=out.iloc[i-1]+(c if pd.notna(c) else 2/(slow+1))*(s.iloc[i]-out.iloc[i-1])
     return out
 
+def clean_prices(price, max_daily_move=0.25):
+    """Rimuove singole osservazioni anomale provider (ETF non leveraged)."""
+    p=price.dropna().astype(float)
+    p=p[p>0]
+    moves=p.pct_change()
+    bad=moves.index[moves.abs()>max_daily_move]
+    # Elimina la seduta anomala: evita di propagare split/quote errate nei rendimenti.
+    p=p.drop(bad)
+    return p, [d.strftime("%Y-%m-%d") for d in bad]
+
 def metrics(price, signal):
     p=price.dropna(); sig=signal.shift(1).reindex(p.index).fillna(0).astype(float)
     ret=p.pct_change().fillna(0); turnover=sig.diff().abs().fillna(sig.abs())
@@ -67,16 +77,22 @@ def main():
         except Exception:return pd.Series(dtype=float)
     bench=series(BENCH)
     for t,row in symbols.items():
-        p=series(t)
+        p0=series(t)
+        p,bad_days=clean_prices(p0)
         if len(p)<300 or len(bench)<300: continue
         sig,lines=calc(p)
         item={"ticker":t,"name":row["name"],"category":row["category"],"last_price":round(float(p.iloc[-1]),4),
+        "data_quality":{"removed_outlier_sessions":len(bad_days),"dates":bad_days},
         "signals":{k:int(v.iloc[-1]) for k,v in sig.items()},"kama_fast":round(float(lines["fast"].iloc[-1]),4),
         "kama_slow":round(float(lines["slow"].iloc[-1]),4),"metrics":{}}
         for k,v in sig.items():item["metrics"][k]=metrics(p,v)
         item["metrics"]["Buy & Hold"]={period:{"strategy_return":m["buy_hold_return"],"buy_hold_return":m["buy_hold_return"],"strategy_maxdd":m["buy_hold_maxdd"],"exposure":1} if m else None for period,m in item["metrics"]["Kamal5"].items()}
         data["assets"].append(item)
+    if not data["assets"]:
+        raise RuntimeError("Zero ETF calcolati: interrompo il workflow per non pubblicare un feed vuoto.")
     Path("data").mkdir(exist_ok=True)
     Path("data/strategies.json").write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding="utf-8")
-    print(f"Strategy feed: {len(data['assets'])} ETF")
+    flagged=[a for a in data["assets"] if a["data_quality"]["removed_outlier_sessions"]]
+    print(f"Strategy feed: {len(data['assets'])} ETF; anomalie prezzo rimosse su {len(flagged)} ETF")
+    for a in flagged: print(a["ticker"],a["data_quality"]["dates"])
 if __name__=="__main__":main()
