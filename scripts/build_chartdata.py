@@ -36,12 +36,12 @@ def main():
     elif c.iloc[i]<prevlo.iloc[i]:state=0
     ss.append(state)
    z["k5"]=ss;fields=["open","high","low","close","volume","d20h","d20l","d55h","d55l","kama10","kama30","ema20","ema50","ema200","jaw","teeth","lips","sar","ao","viPlus","viMinus","rvgi","rvgiSignal","k5"];rows=[]
-   for date,r in z.tail(1250).iterrows():
+   for date,r in z.tail(504).iterrows():
     d={"date":date.strftime("%Y-%m-%d")}
     for f in fields:d[f]=None if pd.isna(r.get(f)) else round(float(r.get(f)),5)
     rows.append(d)
-   assets.append({"ticker":t,"name":row["name"],"category":row["category"],"rows":rows})
+   assets.append({"ticker":t,"name":row["name"],"category":row["category"],"rows":[[r["date"]]+[r[f] for f in fields] for r in rows]})
   except Exception as e:print("SKIP",t,str(e))
  if not assets:raise RuntimeError("Nessuna serie OHLC generata")
- Path("data").mkdir(exist_ok=True);Path("data/chartdata.json").write_text(json.dumps({"updated":pd.Timestamp.now("UTC").isoformat(),"assets":assets},ensure_ascii=False),encoding="utf-8");print(f"Chart feed: {len(assets)} ETF OHLC")
+ Path("data").mkdir(exist_ok=True);Path("data/chartdata.json").write_text(json.dumps({"updated":pd.Timestamp.now("UTC").isoformat(),"columns":["date"]+fields,"assets":assets},ensure_ascii=False,separators=(",",":")),encoding="utf-8");print(f"Chart feed: {len(assets)} ETF OHLC")
 if __name__=="__main__":main()
