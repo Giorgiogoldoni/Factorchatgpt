@@ -1,0 +1,12 @@
+{
+  "updated": "2026-11-27T10:00:10.710730+00:00",
+  "benchmark": "SWDA.MI",
+  "transaction_cost": 0.001,
+  "methodology": {
+    "Kamal5": "Close > massimo dei 5 giorni precedenti entra; close < minimo dei 5 giorni precedenti esce, long/cash.",
+    "KAMA Cloud": "KAMA(10) e KAMA(30); long quando prezzo > KAMA10 > KAMA30, altrimenti cash.",
+    "Ibrida": "Long solo quando Kamal5 e KAMA Cloud sono entrambi long.",
+    "costs": "0.10% per cambio esposizione; prezzi adjusted Yahoo Finance, proxy Buy & Hold."
+  },
+  "assets": []
+}
