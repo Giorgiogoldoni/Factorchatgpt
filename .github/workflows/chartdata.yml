@@ -2,7 +2,8 @@ name: Update Factor Chart OHLC
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 22 * * 1-5"
+    - cron: '0 10 * * *'
+    - cron: '0 22 * * *'
   push:
     paths:
       - "scripts/build_chartdata.py"
