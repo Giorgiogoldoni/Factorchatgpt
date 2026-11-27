@@ -28,7 +28,7 @@ SYMBOLS = {
     "IAPD.MI": "High Dividend · Asia Pacific",
     "VHYA.MI": "High Dividend · Global",
 }
-BENCHMARK = "IWDA.MI"  # iShares Core MSCI World UCITS ETF, benchmark globale
+BENCHMARK = "SWDA.MI"  # iShares Core MSCI World UCITS ETF, quotazione Borsa Italiana
 WINDOW = 26             # settimane per normalizzazione
 TAIL = 8                # punti settimanali nella coda
 
