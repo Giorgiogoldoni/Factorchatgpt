@@ -57,18 +57,18 @@ def main():
     universe=list(csv.DictReader(open("data/factor_universe.csv",encoding="utf-8-sig")))
     symbols={MAP.get(row["ticker"].split(".")[0],row["ticker"]):row for row in universe}
     tickers=list(symbols)+[BENCH]
-    raw=yf.download(tickers,period="5y",interval="1d",auto_adjust=True,progress=False,threads=True)
-    data={"updated":pd.Timestamp.utcnow().isoformat(),"benchmark":BENCH,"transaction_cost":COST,
+    raw=yf.download(tickers,period="5y",interval="1d",auto_adjust=True,progress=False,threads=True,group_by="ticker")
+    data={"updated":pd.Timestamp.now("UTC").isoformat(),"benchmark":BENCH,"transaction_cost":COST,
     "methodology":{"Kamal5":"Close > massimo dei 5 giorni precedenti entra; close < minimo dei 5 giorni precedenti esce, long/cash.","KAMA Cloud":"KAMA(10) e KAMA(30); long quando prezzo > KAMA10 > KAMA30, altrimenti cash.","Ibrida":"Long solo quando Kamal5 e KAMA Cloud sono entrambi long.","costs":"0.10% per cambio esposizione; prezzi adjusted Yahoo Finance, proxy Buy & Hold."},"assets":[]}
     def series(t):
         try:
-            s=raw[t]["Close"] if isinstance(raw.columns,pd.MultiIndex) else raw["Close"]
+            s=raw[t]["Close"] if isinstance(raw.columns,pd.MultiIndex) and t in raw.columns.get_level_values(0) else (raw["Close"][t] if isinstance(raw.columns,pd.MultiIndex) and t in raw.columns.get_level_values(1) else raw["Close"])
             return s.dropna()
         except Exception:return pd.Series(dtype=float)
     bench=series(BENCH)
     for t,row in symbols.items():
         p=series(t)
-        if len(p)<800 or len(bench)<800: continue
+        if len(p)<300 or len(bench)<300: continue
         sig,lines=calc(p)
         item={"ticker":t,"name":row["name"],"category":row["category"],"last_price":round(float(p.iloc[-1]),4),
         "signals":{k:int(v.iloc[-1]) for k,v in sig.items()},"kama_fast":round(float(lines["fast"].iloc[-1]),4),
