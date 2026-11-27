@@ -20,7 +20,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:18px;fl
 <body><main>
 <header>
  <div class="hero"><div class="brand">FactorChatGPT · Research Lab</div><h1>ETF Factor Dashboard</h1><p>Un laboratorio per confrontare i fattori azionari, leggere la rotazione relativa e testare strategie sistematiche su ETF UCITS.</p></div>
- <nav class="nav" aria-label="Navigazione"><a href="#catalogo">Catalogo</a><a href="./rrg.html" class="primary">Apri RRG ↗</a><a href="#strategie">Strategie</a></nav>
+ <nav class="nav" aria-label="Navigazione"><a href="#catalogo">Catalogo</a><a href="./rrg.html" class="primary">Apri RRG ↗</a><a href="./strategies.html">Strategy Lab</a><a href="#strategie">Metodo</a></nav>
 </header>
 <div class="metrics">
  <div class="metric"><strong id="etf-count">22</strong><span>ETF nel perimetro di ricerca</span></div>
@@ -32,9 +32,9 @@ header{display:flex;justify-content:space-between;align-items:center;gap:18px;fl
  <div class="section-head"><div><div class="eyebrow">Area operativa</div><h2>Moduli di analisi</h2><div class="muted">Accesso ai pannelli e stato di avanzamento effettivo.</div></div></div>
  <div class="modules">
   <article class="module"><div class="eyebrow">01 · Rotazione</div><h3>Relative Rotation Graph</h3><p>Posizione dei factor ETF rispetto a MSCI World, quadranti Leading, Weakening, Lagging e Improving e coda delle ultime settimane.</p><div class="module-foot"><span id="rrg-status" class="status">Verifica feed…</span><a class="button primary" href="./rrg.html">Apri grafico ↗</a></div></article>
-  <article class="module"><div class="eyebrow">02 · Momentum</div><h3>Kamal5</h3><p>Metodo breakout a cinque sedute, long/cash. Da collegare ai segnali storici e al confronto con Buy &amp; Hold.</p><div class="module-foot"><span class="status pending">In sviluppo</span><span class="muted">Segnali non pubblicati</span></div></article>
-  <article class="module"><div class="eyebrow">03 · Trend</div><h3>KAMA Cloud</h3><p>Nuvola multi-KAMA, direzione, ampiezza e contrazione. Il modulo sarà popolato dopo la verifica delle serie e delle regole.</p><div class="module-foot"><span class="status pending">In sviluppo</span><span class="muted">Calcolo da integrare</span></div></article>
-  <article class="module"><div class="eyebrow">04 · Strategia</div><h3>Strategia ibrida</h3><p>Combinazione Kamal5 e KAMA Cloud, con confronto Buy &amp; Hold e test fuori campione.</p><div class="module-foot"><span class="status pending">In sviluppo</span><span class="muted">Backtest da validare</span></div></article>
+  <article class="module"><div class="eyebrow">02 · Momentum</div><h3>Kamal5</h3><p>Breakout a cinque sedute, long/cash; confronto Buy &amp; Hold e metriche su 6 mesi, 1 e 3 anni.</p><div class="module-foot"><span class="status pending">Feed in avvio</span><a href="./strategies.html">Apri Strategy Lab ↗</a></div></article>
+  <article class="module"><div class="eyebrow">03 · Trend</div><h3>KAMA Cloud</h3><p>Regime KAMA 10/30, prezzo rispetto alla nuvola, stato trend e confronto storico.</p><div class="module-foot"><span class="status pending">Feed in avvio</span><a href="./strategies.html">Apri Strategy Lab ↗</a></div></article>
+  <article class="module"><div class="eyebrow">04 · Strategia</div><h3>Strategia ibrida</h3><p>Filtro combinato breakout e trend. Dashboard segnali e backtest con costi ipotetici.</p><div class="module-foot"><span class="status pending">Feed in avvio</span><a href="./strategies.html">Apri Strategy Lab ↗</a></div></article>
   <article class="module"><div class="eyebrow">05 · Universo</div><h3>Catalogo factor ETF</h3><p>Universo circoscritto alle cinque famiglie: Equal Weight, Momentum, Value, Quality e High Dividend.</p><div class="module-foot"><span class="status live">Disponibile</span><a href="#catalogo">Consulta catalogo ↓</a></div></article>
  </div>
 </section>
