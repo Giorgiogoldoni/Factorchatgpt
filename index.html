@@ -2,38 +2,67 @@
 <html lang="it">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="FactorChatGPT ETF Factor Lab: catalogo ETF, momentum, KAMA Cloud e Relative Rotation Graph.">
 <title>FactorChatGPT · ETF Factor Lab</title>
 <style>
-:root{color-scheme:dark;--bg:#0b1220;--panel:#131e30;--line:#26364d;--muted:#9aabc2;--text:#edf4ff;--accent:#70c4b2}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#0b1220,#101b2c);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:1180px;margin:auto;padding:28px 18px 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-h1{font-size:clamp(28px,5vw,44px);margin:8px 0}h2{font-size:20px;margin:0 0 14px}.sub,.muted{color:var(--muted)}.tag{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:24px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px}.num{font-size:27px;font-weight:750}.card small{color:var(--muted)}
-section{background:rgba(19,30,48,.8);border:1px solid var(--line);border-radius:16px;padding:20px;margin:18px 0}
-table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px 9px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600}td{vertical-align:top}.pill{display:inline-block;padding:3px 8px;border:1px solid #3b536d;border-radius:20px;font-size:12px;color:#c9d9ed}
-.note{border-left:3px solid var(--accent);padding:10px 14px;background:#102b30;border-radius:6px;color:#d9f3ed}
-@media(max-width:650px){main{padding:20px 12px}section{padding:14px;overflow-x:auto}table{min-width:720px}}
-</style></head>
+:root{color-scheme:dark;--bg:#09111e;--panel:#111d2e;--panel2:#16243a;--line:#293b53;--muted:#9aabc2;--text:#edf4ff;--accent:#70c4b2;--blue:#79aef2;--gold:#e8c15c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#172b40 0,transparent 38%),linear-gradient(145deg,#09111e,#101a2a);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}main{max-width:1180px;margin:auto;padding:28px 18px 56px}
+header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:8px 0 20px}.brand{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.08;letter-spacing:-.035em;margin:10px 0}.hero p{color:var(--muted);max-width:700px;margin:0}.nav{display:flex;gap:9px;flex-wrap:wrap}.nav a,.button{border:1px solid var(--line);border-radius:999px;padding:8px 13px;color:#dce9f8;font-size:13px}.nav a.primary,.button.primary{background:#173b3b;border-color:#32675e;color:#b9f1e2}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:24px 0}.metric,.panel,.module{background:linear-gradient(145deg,rgba(22,36,58,.96),rgba(15,27,44,.96));border:1px solid var(--line);border-radius:16px}.metric{padding:16px}.metric strong{display:block;font-size:27px;line-height:1.2}.metric span{display:block;color:var(--muted);font-size:12px;margin-top:5px}
+.panel{padding:20px;margin:18px 0}.section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:14px}h2{font-size:20px;margin:0 0 5px}h3{font-size:17px;margin:0 0 7px}.muted{color:var(--muted)}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:750}
+.modules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.module{padding:17px;display:flex;flex-direction:column;min-height:180px}.module p{color:var(--muted);font-size:13px;margin:4px 0 15px;flex:1}.module-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.status{font-size:11px;padding:4px 8px;border-radius:20px;border:1px solid #465b75;color:#cbd9ea}.status.live{border-color:#347966;color:#a8e8d5;background:#15332f}.status.pending{border-color:#79683d;color:#f0d99a;background:#342e20}
+.controls{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.controls input,.controls select{background:#0b1626;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:9px;font:inherit;min-width:180px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;font-size:13px;min-width:760px}th,td{text-align:left;padding:10px 11px;border-bottom:1px solid var(--line)}th{position:sticky;top:0;background:#17263a;color:#b8c8dc;font-weight:650}td{vertical-align:top}tbody tr:hover{background:#18283d}.count{color:var(--muted);font-size:12px}.tag{display:inline-block;border:1px solid #3b536d;border-radius:20px;padding:2px 8px;font-size:11px;color:#c9d9ed;white-space:nowrap}.notice{border-left:3px solid var(--accent);padding:11px 14px;background:#102b30;border-radius:7px;color:#d9f3ed;font-size:13px}.method{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.method>div{background:#0d1929;border:1px solid var(--line);border-radius:12px;padding:14px}.method p{margin:5px 0 0;color:var(--muted);font-size:13px}footer{padding:18px 2px;color:var(--muted);font-size:12px}
+@media(max-width:850px){.modules{grid-template-columns:repeat(2,minmax(0,1fr))}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){main{padding:18px 12px 40px}.modules,.method{grid-template-columns:1fr}.panel{padding:15px}.nav{width:100%}.nav a{font-size:12px}.metric{padding:13px}.metric strong{font-size:24px}}
+</style>
+</head>
 <body><main>
-<div class="top"><div><div class="tag">FactorChatGPT · Research Lab</div><h1>ETF Factor Dashboard</h1><div class="sub">Universo, momentum e strategie dinamiche per ETF factor UCITS</div></div><span class="pill">Catalogo + RRG in sviluppo</span></div>
-<div class="grid">
-<div class="card"><div class="num">22</div><small>ETF censiti nel catalogo</small></div>
-<div class="card"><div class="num">5</div><small>Famiglie factor</small></div>
-<div class="card"><div class="num">4</div><small>Moduli analitici</small></div>
-<div class="card"><div class="num">—</div><small>Ultimo aggiornamento prezzi · da collegare</small></div>
+<header>
+ <div class="hero"><div class="brand">FactorChatGPT · Research Lab</div><h1>ETF Factor Dashboard</h1><p>Un laboratorio per confrontare i fattori azionari, leggere la rotazione relativa e testare strategie sistematiche su ETF UCITS.</p></div>
+ <nav class="nav" aria-label="Navigazione"><a href="#catalogo">Catalogo</a><a href="./rrg.html" class="primary">Apri RRG ↗</a><a href="#strategie">Strategie</a></nav>
+</header>
+<div class="metrics">
+ <div class="metric"><strong id="etf-count">22</strong><span>ETF nel perimetro di ricerca</span></div>
+ <div class="metric"><strong id="factor-count">5</strong><span>Famiglie factor</span></div>
+ <div class="metric"><strong>5</strong><span>Moduli del laboratorio</span></div>
+ <div class="metric"><strong id="data-status">—</strong><span id="data-label">Stato aggiornamento RRG</span></div>
 </div>
-<section><h2>Universo factor</h2><p class="muted">Il perimetro di ricerca resta circoscritto agli ETF elencati qui. I dati di prezzo, i segnali e i backtest saranno pubblicati solo dopo la verifica delle serie storiche e delle quotazioni.</p><div id="catalog">Caricamento catalogo…</div></section>
-<section><h2>Motore di analisi</h2><div class="grid">
-<div class="card"><b>Kamal5</b><p class="muted">Segnale breakout a 5 sedute, long/cash.</p></div>
-<div class="card"><b>KAMA Cloud</b><p class="muted">Nuvola multi-KAMA, direzione e contrazione.</p></div>
-<div class="card"><b>Strategia ibrida</b><p class="muted">Combinazione dei segnali con confronto Buy &amp; Hold e test out-of-sample.</p></div>
-</div><p class="note">Questa prima pubblicazione è la struttura del progetto: non mostra ancora segnali operativi né rendimenti non verificati.</p></section>
-<footer class="muted">FactorChatGPT · Ricerca quantitativa informativa · Non costituisce consulenza finanziaria.</footer>
+<section class="panel">
+ <div class="section-head"><div><div class="eyebrow">Area operativa</div><h2>Moduli di analisi</h2><div class="muted">Accesso ai pannelli e stato di avanzamento effettivo.</div></div></div>
+ <div class="modules">
+  <article class="module"><div class="eyebrow">01 · Rotazione</div><h3>Relative Rotation Graph</h3><p>Posizione dei factor ETF rispetto a MSCI World, quadranti Leading, Weakening, Lagging e Improving e coda delle ultime settimane.</p><div class="module-foot"><span id="rrg-status" class="status">Verifica feed…</span><a class="button primary" href="./rrg.html">Apri grafico ↗</a></div></article>
+  <article class="module"><div class="eyebrow">02 · Momentum</div><h3>Kamal5</h3><p>Metodo breakout a cinque sedute, long/cash. Da collegare ai segnali storici e al confronto con Buy &amp; Hold.</p><div class="module-foot"><span class="status pending">In sviluppo</span><span class="muted">Segnali non pubblicati</span></div></article>
+  <article class="module"><div class="eyebrow">03 · Trend</div><h3>KAMA Cloud</h3><p>Nuvola multi-KAMA, direzione, ampiezza e contrazione. Il modulo sarà popolato dopo la verifica delle serie e delle regole.</p><div class="module-foot"><span class="status pending">In sviluppo</span><span class="muted">Calcolo da integrare</span></div></article>
+  <article class="module"><div class="eyebrow">04 · Strategia</div><h3>Strategia ibrida</h3><p>Combinazione Kamal5 e KAMA Cloud, con confronto Buy &amp; Hold e test fuori campione.</p><div class="module-foot"><span class="status pending">In sviluppo</span><span class="muted">Backtest da validare</span></div></article>
+  <article class="module"><div class="eyebrow">05 · Universo</div><h3>Catalogo factor ETF</h3><p>Universo circoscritto alle cinque famiglie: Equal Weight, Momentum, Value, Quality e High Dividend.</p><div class="module-foot"><span class="status live">Disponibile</span><a href="#catalogo">Consulta catalogo ↓</a></div></article>
+ </div>
+</section>
+<section class="panel" id="catalogo">
+ <div class="section-head"><div><div class="eyebrow">Universo investibile</div><h2>Catalogo ETF factor</h2><div class="muted">Elenco tratto dal file CSV del repository. I ticker sono quelli riportati nel catalogo; lo stato di verifica va letto nella relativa colonna.</div></div><a class="button" href="./data/factor_universe.csv" download>Scarica CSV ↓</a></div>
+ <div class="controls"><input id="search" type="search" placeholder="Cerca ETF, ticker o ISIN…" aria-label="Cerca nel catalogo"><select id="category" aria-label="Filtra per categoria"><option value="">Tutte le categorie</option></select></div>
+ <div id="catalog-count" class="count">Caricamento catalogo…</div>
+ <div id="catalog" class="table-wrap" style="margin-top:10px">Caricamento…</div>
+</section>
+<section class="panel" id="strategie">
+ <div class="eyebrow">Metodo e trasparenza</div><h2>Come utilizziamo i dati</h2>
+ <div class="method">
+  <div><h3>Relative Rotation Graph</h3><p>La pagina RRG usa frequenza settimanale e benchmark MSCI World. La formula implementata è un'approssimazione pubblica normalizzata, non la formula proprietaria JdK.</p></div>
+  <div><h3>Prezzi e copertura</h3><p>Le serie possono avere buchi o ticker non riconosciuti dal fornitore. Un ETF non presente nel grafico non va interpretato come dato negativo: può essere un problema di copertura.</p></div>
+  <div><h3>Segnali e backtest</h3><p>Kamal5, KAMA Cloud e strategia ibrida saranno pubblicati solo dopo controlli su prezzi, costi, dividendi, date e assenza di look-ahead bias.</p></div>
+  <div><h3>Uso dei risultati</h3><p>Quadranti e indicatori sono strumenti di analisi comparativa, non raccomandazioni automatiche di acquisto o vendita.</p></div>
+ </div>
+ <p class="notice" style="margin-top:15px">Trasparenza: al momento il catalogo è consultabile e il modulo RRG è separato. Kamal5, KAMA Cloud e strategia ibrida sono indicati come in sviluppo: non vengono mostrati segnali o rendimenti non ancora validati.</p>
+</section>
+<footer>FactorChatGPT · ETF Factor Lab · Ricerca quantitativa informativa · Non costituisce consulenza finanziaria. <span style="float:right"><a href="https://github.com/Giorgiogoldoni/Factorchatgpt">Repository GitHub ↗</a></span></footer>
 </main>
 <script>
-fetch('./data/factor_universe.csv').then(r=>{if(!r.ok)throw Error('CSV non disponibile');return r.text()}).then(t=>{
-const lines=t.trim().split(/\r?\n/), rows=lines.slice(1).map(l=>l.split(','));
-const cats=[...new Set(rows.map(r=>r[0]))];
-document.getElementById('catalog').innerHTML='<p class="muted">'+rows.length+' strumenti · '+cats.length+' categorie</p><table><thead><tr><th>Categoria</th><th>Ticker</th><th>ETF</th><th>ISIN</th><th>Area</th><th>Dividendi</th></tr></thead><tbody>'+rows.map(r=>'<tr>'+[r[0],r[1],r[2],r[3],r[4],r[7]].map(v=>'<td>'+v.replaceAll('&','&amp;').replaceAll('<','&lt;')+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
-}).catch(e=>document.getElementById('catalog').textContent='Catalogo non disponibile: '+e.message);
-</script></body></html>
+let catalogRows=[];
+const esc=v=>String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
+function parseCSV(text){const out=[];let row=[],field="",quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'&&quoted&&text[i+1]==='"'){field+='"';i++;}else if(c==='"'){quoted=!quoted;}else if(c===","&&!quoted){row.push(field);field="";}else if((c==="\n"||c==="\r")&&!quoted){if(c==="\r"&&text[i+1]==="\n")i++;row.push(field);if(row.some(x=>x!==""))out.push(row);row=[];field="";}else field+=c;}if(field.length||row.length){row.push(field);out.push(row);}const headers=out.shift()||[];return out.map(r=>Object.fromEntries(headers.map((h,i)=>[h,r[i]||""])));}
+function renderCatalog(){const q=document.getElementById("search").value.toLowerCase().trim(),cat=document.getElementById("category").value;const rows=catalogRows.filter(r=>(!cat||r.category===cat)&&(!q||[r.name,r.ticker,r.isin,r.geography,r.category].join(" ").toLowerCase().includes(q)));document.getElementById("catalog-count").textContent=rows.length+" ETF visualizzati · "+catalogRows.length+" totali";if(!rows.length){document.getElementById("catalog").innerHTML='<p class="muted" style="padding:14px">Nessun ETF corrisponde ai filtri selezionati.</p>';return;}document.getElementById("catalog").innerHTML='<table><thead><tr><th>Famiglia</th><th>Ticker</th><th>ETF</th><th>ISIN</th><th>Area</th><th>Distribuzione</th><th>Verifica</th></tr></thead><tbody>'+rows.map(r=>'<tr><td><span class="tag">'+esc(r.category.replaceAll("_"," "))+'</span></td><td><b>'+esc(r.ticker)+'</b></td><td>'+esc(r.name)+'</td><td>'+esc(r.isin)+'</td><td>'+esc(r.geography)+'</td><td>'+esc(r.distribution)+'</td><td class="muted">'+esc(r.verification_status)+'</td></tr>').join("")+'</tbody></table>';}
+fetch("./data/factor_universe.csv").then(r=>{if(!r.ok)throw Error("CSV non disponibile");return r.text();}).then(t=>{catalogRows=parseCSV(t);const cats=[...new Set(catalogRows.map(r=>r.category))];document.getElementById("etf-count").textContent=catalogRows.length;document.getElementById("factor-count").textContent=cats.length;const sel=document.getElementById("category");cats.forEach(c=>{const o=document.createElement("option");o.value=c;o.textContent=c.replaceAll("_"," ");sel.appendChild(o);});renderCatalog();}).catch(e=>{document.getElementById("catalog").textContent="Catalogo non disponibile: "+e.message;document.getElementById("catalog-count").textContent="Errore caricamento catalogo";});
+document.getElementById("search").addEventListener("input",renderCatalog);document.getElementById("category").addEventListener("change",renderCatalog);
+fetch("./data/rrg.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("Feed non ancora pubblicato");return r.json();}).then(d=>{const n=(d.assets||[]).length;if(!n)throw Error("Nessun ETF con serie disponibili");const dt=d.updated?new Date(d.updated).toLocaleDateString("it-IT"):"data non indicata";document.getElementById("data-status").textContent=n;document.getElementById("data-label").textContent="ETF con dati RRG · aggiornamento "+dt;const s=document.getElementById("rrg-status");s.textContent=n+" ETF · "+dt;s.classList.add("live");}).catch(e=>{document.getElementById("data-status").textContent="N/D";document.getElementById("data-label").textContent="Feed RRG da verificare";document.getElementById("rrg-status").textContent="Feed non disponibile";document.getElementById("rrg-status").classList.add("pending");});
+</script>
+</body></html>
