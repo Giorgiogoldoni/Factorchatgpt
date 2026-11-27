@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T10:04:33.857433+00:00",
+  "updated": "2026-11-27T10:34:27.073405+00:00",
   "benchmark": "SWDA.MI",
   "transaction_cost": 0.001,
   "methodology": {
@@ -14,13 +14,20 @@
       "name": "Invesco S&P 500 Equal Weight UCITS ETF Acc",
       "category": "EQUAL_WEIGHT",
       "last_price": 68.37,
+      "data_quality": {
+        "removed_outlier_sessions": 2,
+        "dates": [
+          "2025-04-25",
+          "2025-04-28"
+        ]
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 1,
         "Ibrida": 1
       },
       "kama_fast": 67.4339,
-      "kama_slow": 67.4086,
+      "kama_slow": 67.4085,
       "metrics": {
         "Kamal5": {
           "6m": {
@@ -29,7 +36,7 @@
             "excess": -0.11495,
             "strategy_maxdd": -0.06107,
             "buy_hold_maxdd": -0.04376,
-            "exposure": 0.5674
+            "exposure": 0.5667
           },
           "1y": {
             "strategy_return": 0.05719,
@@ -37,67 +44,67 @@
             "excess": -0.17426,
             "strategy_maxdd": -0.06107,
             "buy_hold_maxdd": -0.0514,
-            "exposure": 0.5674
+            "exposure": 0.5667
           },
           "3y": {
-            "strategy_return": 0.17259,
-            "buy_hold_return": 0.54666,
-            "excess": -0.37406,
-            "strategy_maxdd": -0.99012,
-            "buy_hold_maxdd": -0.98998,
-            "exposure": 0.5674
+            "strategy_return": 0.17365,
+            "buy_hold_return": 0.54806,
+            "excess": -0.3744,
+            "strategy_maxdd": -0.09717,
+            "buy_hold_maxdd": -0.22546,
+            "exposure": 0.5667
           }
         },
         "KAMA Cloud": {
           "6m": {
-            "strategy_return": 0.03451,
+            "strategy_return": 0.04021,
             "buy_hold_return": 0.10739,
-            "excess": -0.07288,
+            "excess": -0.06718,
             "strategy_maxdd": -0.04326,
             "buy_hold_maxdd": -0.04376,
-            "exposure": 0.3184
+            "exposure": 0.4459
           },
           "1y": {
-            "strategy_return": 0.03988,
+            "strategy_return": 0.11205,
             "buy_hold_return": 0.23145,
-            "excess": -0.19157,
+            "excess": -0.1194,
             "strategy_maxdd": -0.04326,
             "buy_hold_maxdd": -0.0514,
-            "exposure": 0.3184
+            "exposure": 0.4459
           },
           "3y": {
-            "strategy_return": -0.99022,
-            "buy_hold_return": 0.54666,
-            "excess": -1.53688,
-            "strategy_maxdd": -0.99189,
-            "buy_hold_maxdd": -0.98998,
-            "exposure": 0.3184
+            "strategy_return": 0.10337,
+            "buy_hold_return": 0.54806,
+            "excess": -0.44469,
+            "strategy_maxdd": -0.13738,
+            "buy_hold_maxdd": -0.22546,
+            "exposure": 0.4459
           }
         },
         "Ibrida": {
           "6m": {
-            "strategy_return": 0.00022,
+            "strategy_return": 0.00573,
             "buy_hold_return": 0.10739,
-            "excess": -0.10717,
+            "excess": -0.10166,
             "strategy_maxdd": -0.04892,
             "buy_hold_maxdd": -0.04376,
-            "exposure": 0.2679
+            "exposure": 0.3788
           },
           "1y": {
-            "strategy_return": 0.00541,
+            "strategy_return": 0.0575,
             "buy_hold_return": 0.23145,
-            "excess": -0.22604,
+            "excess": -0.17395,
             "strategy_maxdd": -0.04892,
             "buy_hold_maxdd": -0.0514,
-            "exposure": 0.2679
+            "exposure": 0.3788
           },
           "3y": {
-            "strategy_return": -0.99086,
-            "buy_hold_return": 0.54666,
-            "excess": -1.53752,
-            "strategy_maxdd": -0.99203,
-            "buy_hold_maxdd": -0.98998,
-            "exposure": 0.2679
+            "strategy_return": 0.03187,
+            "buy_hold_return": 0.54806,
+            "excess": -0.51618,
+            "strategy_maxdd": -0.13581,
+            "buy_hold_maxdd": -0.22546,
+            "exposure": 0.3788
           }
         },
         "Buy & Hold": {
@@ -114,9 +121,9 @@
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.54666,
-            "buy_hold_return": 0.54666,
-            "strategy_maxdd": -0.98998,
+            "strategy_return": 0.54806,
+            "buy_hold_return": 0.54806,
+            "strategy_maxdd": -0.22546,
             "exposure": 1
           }
         }
@@ -126,7 +133,11 @@
       "ticker": "MWEQ.MI",
       "name": "Invesco MSCI World Equal Weight UCITS ETF Acc",
       "category": "EQUAL_WEIGHT",
-      "last_price": 6.129,
+      "last_price": 6.127,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
@@ -137,17 +148,17 @@
       "metrics": {
         "Kamal5": {
           "6m": {
-            "strategy_return": -0.02293,
-            "buy_hold_return": 0.06573,
-            "excess": -0.08865,
+            "strategy_return": -0.02325,
+            "buy_hold_return": 0.06538,
+            "excess": -0.08863,
             "strategy_maxdd": -0.05814,
             "buy_hold_maxdd": -0.0499,
             "exposure": 0.6007
           },
           "1y": {
-            "strategy_return": 0.02592,
-            "buy_hold_return": 0.17865,
-            "excess": -0.15273,
+            "strategy_return": 0.02559,
+            "buy_hold_return": 0.17827,
+            "excess": -0.15268,
             "strategy_maxdd": -0.05814,
             "buy_hold_maxdd": -0.06708,
             "exposure": 0.6007
@@ -157,16 +168,16 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": 0.00335,
-            "buy_hold_return": 0.06573,
-            "excess": -0.06238,
+            "buy_hold_return": 0.06538,
+            "excess": -0.06203,
             "strategy_maxdd": -0.02961,
             "buy_hold_maxdd": -0.0499,
             "exposure": 0.586
           },
           "1y": {
             "strategy_return": 0.05427,
-            "buy_hold_return": 0.17865,
-            "excess": -0.12438,
+            "buy_hold_return": 0.17827,
+            "excess": -0.124,
             "strategy_maxdd": -0.04042,
             "buy_hold_maxdd": -0.06708,
             "exposure": 0.586
@@ -176,16 +187,16 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.02747,
-            "buy_hold_return": 0.06573,
-            "excess": -0.0932,
+            "buy_hold_return": 0.06538,
+            "excess": -0.09285,
             "strategy_maxdd": -0.0515,
             "buy_hold_maxdd": -0.0499,
             "exposure": 0.4787
           },
           "1y": {
             "strategy_return": -0.00632,
-            "buy_hold_return": 0.17865,
-            "excess": -0.18497,
+            "buy_hold_return": 0.17827,
+            "excess": -0.18458,
             "strategy_maxdd": -0.0515,
             "buy_hold_maxdd": -0.06708,
             "exposure": 0.4787
@@ -194,14 +205,14 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": 0.06573,
-            "buy_hold_return": 0.06573,
+            "strategy_return": 0.06538,
+            "buy_hold_return": 0.06538,
             "strategy_maxdd": -0.0499,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.17865,
-            "buy_hold_return": 0.17865,
+            "strategy_return": 0.17827,
+            "buy_hold_return": 0.17827,
             "strategy_maxdd": -0.06708,
             "exposure": 1
           },
@@ -214,6 +225,10 @@
       "name": "Invesco MSCI Europe Equal Weight UCITS ETF Acc",
       "category": "EQUAL_WEIGHT",
       "last_price": 19.036,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 0,
         "KAMA Cloud": 0,
@@ -301,6 +316,10 @@
       "name": "Invesco NASDAQ-100 Equal Weight UCITS ETF Acc",
       "category": "EQUAL_WEIGHT",
       "last_price": 6.952,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
@@ -413,36 +432,40 @@
       "ticker": "IWMO.MI",
       "name": "iShares Edge MSCI World Momentum Factor UCITS ETF",
       "category": "MOMENTUM",
-      "last_price": 89.28,
+      "last_price": 89.2,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 0,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 92.0129,
-      "kama_slow": 92.8715,
+      "kama_fast": 92.0074,
+      "kama_slow": 92.8673,
       "metrics": {
         "Kamal5": {
           "6m": {
             "strategy_return": -0.17923,
-            "buy_hold_return": -0.12778,
-            "excess": -0.05144,
+            "buy_hold_return": -0.12857,
+            "excess": -0.05066,
             "strategy_maxdd": -0.18899,
             "buy_hold_maxdd": -0.22815,
             "exposure": 0.5634
           },
           "1y": {
             "strategy_return": -0.06924,
-            "buy_hold_return": 0.08666,
-            "excess": -0.1559,
+            "buy_hold_return": 0.08569,
+            "excess": -0.15493,
             "strategy_maxdd": -0.18899,
             "buy_hold_maxdd": -0.22815,
             "exposure": 0.5634
           },
           "3y": {
             "strategy_return": 0.17098,
-            "buy_hold_return": 0.65825,
-            "excess": -0.48727,
+            "buy_hold_return": 0.65676,
+            "excess": -0.48578,
             "strategy_maxdd": -0.18899,
             "buy_hold_maxdd": -0.23446,
             "exposure": 0.5634
@@ -451,24 +474,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.10083,
-            "buy_hold_return": -0.12778,
-            "excess": 0.02696,
+            "buy_hold_return": -0.12857,
+            "excess": 0.02774,
             "strategy_maxdd": -0.11152,
             "buy_hold_maxdd": -0.22815,
             "exposure": 0.4184
           },
           "1y": {
             "strategy_return": -0.08387,
-            "buy_hold_return": 0.08666,
-            "excess": -0.17053,
+            "buy_hold_return": 0.08569,
+            "excess": -0.16955,
             "strategy_maxdd": -0.1266,
             "buy_hold_maxdd": -0.22815,
             "exposure": 0.4184
           },
           "3y": {
             "strategy_return": 0.01765,
-            "buy_hold_return": 0.65825,
-            "excess": -0.6406,
+            "buy_hold_return": 0.65676,
+            "excess": -0.63911,
             "strategy_maxdd": -0.15983,
             "buy_hold_maxdd": -0.23446,
             "exposure": 0.4184
@@ -477,24 +500,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.07068,
-            "buy_hold_return": -0.12778,
-            "excess": 0.0571,
+            "buy_hold_return": -0.12857,
+            "excess": 0.05788,
             "strategy_maxdd": -0.10021,
             "buy_hold_maxdd": -0.22815,
             "exposure": 0.3578
           },
           "1y": {
             "strategy_return": -0.03571,
-            "buy_hold_return": 0.08666,
-            "excess": -0.12237,
+            "buy_hold_return": 0.08569,
+            "excess": -0.12139,
             "strategy_maxdd": -0.10697,
             "buy_hold_maxdd": -0.22815,
             "exposure": 0.3578
           },
           "3y": {
             "strategy_return": 0.05507,
-            "buy_hold_return": 0.65825,
-            "excess": -0.60318,
+            "buy_hold_return": 0.65676,
+            "excess": -0.60169,
             "strategy_maxdd": -0.11451,
             "buy_hold_maxdd": -0.23446,
             "exposure": 0.3578
@@ -502,20 +525,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": -0.12778,
-            "buy_hold_return": -0.12778,
+            "strategy_return": -0.12857,
+            "buy_hold_return": -0.12857,
             "strategy_maxdd": -0.22815,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.08666,
-            "buy_hold_return": 0.08666,
+            "strategy_return": 0.08569,
+            "buy_hold_return": 0.08569,
             "strategy_maxdd": -0.22815,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.65825,
-            "buy_hold_return": 0.65825,
+            "strategy_return": 0.65676,
+            "buy_hold_return": 0.65676,
             "strategy_maxdd": -0.23446,
             "exposure": 1
           }
@@ -526,36 +549,40 @@
       "ticker": "XDEM.MI",
       "name": "Xtrackers MSCI World Momentum UCITS ETF 1C",
       "category": "MOMENTUM",
-      "last_price": 75.17,
+      "last_price": 75.13,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 0,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 77.467,
-      "kama_slow": 78.2047,
+      "kama_fast": 77.4642,
+      "kama_slow": 78.2026,
       "metrics": {
         "Kamal5": {
           "6m": {
             "strategy_return": -0.15188,
-            "buy_hold_return": -0.12776,
-            "excess": -0.02412,
+            "buy_hold_return": -0.12822,
+            "excess": -0.02366,
             "strategy_maxdd": -0.16118,
             "buy_hold_maxdd": -0.22769,
             "exposure": 0.5634
           },
           "1y": {
             "strategy_return": -0.04695,
-            "buy_hold_return": 0.08753,
-            "excess": -0.13448,
+            "buy_hold_return": 0.08695,
+            "excess": -0.1339,
             "strategy_maxdd": -0.16118,
             "buy_hold_maxdd": -0.22769,
             "exposure": 0.5634
           },
           "3y": {
             "strategy_return": 0.20343,
-            "buy_hold_return": 0.66048,
-            "excess": -0.45706,
+            "buy_hold_return": 0.6596,
+            "excess": -0.45617,
             "strategy_maxdd": -0.16118,
             "buy_hold_maxdd": -0.23395,
             "exposure": 0.5634
@@ -564,24 +591,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.11164,
-            "buy_hold_return": -0.12776,
-            "excess": 0.01612,
+            "buy_hold_return": -0.12822,
+            "excess": 0.01658,
             "strategy_maxdd": -0.12139,
             "buy_hold_maxdd": -0.22769,
             "exposure": 0.4074
           },
           "1y": {
             "strategy_return": -0.08975,
-            "buy_hold_return": 0.08753,
-            "excess": -0.17728,
+            "buy_hold_return": 0.08695,
+            "excess": -0.1767,
             "strategy_maxdd": -0.13283,
             "buy_hold_maxdd": -0.22769,
             "exposure": 0.4074
           },
           "3y": {
             "strategy_return": 0.02876,
-            "buy_hold_return": 0.66048,
-            "excess": -0.63172,
+            "buy_hold_return": 0.6596,
+            "excess": -0.63083,
             "strategy_maxdd": -0.16447,
             "buy_hold_maxdd": -0.23395,
             "exposure": 0.4074
@@ -590,24 +617,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.05196,
-            "buy_hold_return": -0.12776,
-            "excess": 0.0758,
+            "buy_hold_return": -0.12822,
+            "excess": 0.07626,
             "strategy_maxdd": -0.08209,
             "buy_hold_maxdd": -0.22769,
             "exposure": 0.342
           },
           "1y": {
             "strategy_return": -0.02378,
-            "buy_hold_return": 0.08753,
-            "excess": -0.11131,
+            "buy_hold_return": 0.08695,
+            "excess": -0.11073,
             "strategy_maxdd": -0.09889,
             "buy_hold_maxdd": -0.22769,
             "exposure": 0.342
           },
           "3y": {
             "strategy_return": 0.05244,
-            "buy_hold_return": 0.66048,
-            "excess": -0.60804,
+            "buy_hold_return": 0.6596,
+            "excess": -0.60715,
             "strategy_maxdd": -0.14213,
             "buy_hold_maxdd": -0.23395,
             "exposure": 0.342
@@ -615,20 +642,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": -0.12776,
-            "buy_hold_return": -0.12776,
+            "strategy_return": -0.12822,
+            "buy_hold_return": -0.12822,
             "strategy_maxdd": -0.22769,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.08753,
-            "buy_hold_return": 0.08753,
+            "strategy_return": 0.08695,
+            "buy_hold_return": 0.08695,
             "strategy_maxdd": -0.22769,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.66048,
-            "buy_hold_return": 0.66048,
+            "strategy_return": 0.6596,
+            "buy_hold_return": 0.6596,
             "strategy_maxdd": -0.23395,
             "exposure": 1
           }
@@ -639,36 +666,40 @@
       "ticker": "QDVA.DE",
       "name": "iShares Edge MSCI USA Momentum Factor UCITS ETF",
       "category": "MOMENTUM",
-      "last_price": 15.982,
+      "last_price": 15.972,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 0,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 16.6399,
-      "kama_slow": 16.8611,
+      "kama_fast": 16.6393,
+      "kama_slow": 16.8606,
       "metrics": {
         "Kamal5": {
           "6m": {
             "strategy_return": -0.23899,
-            "buy_hold_return": -0.17653,
-            "excess": -0.06246,
+            "buy_hold_return": -0.17704,
+            "excess": -0.06194,
             "strategy_maxdd": -0.25161,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.5224
           },
           "1y": {
             "strategy_return": -0.11502,
-            "buy_hold_return": 0.08162,
-            "excess": -0.19664,
+            "buy_hold_return": 0.08094,
+            "excess": -0.19596,
             "strategy_maxdd": -0.2542,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.5224
           },
           "3y": {
             "strategy_return": 0.06893,
-            "buy_hold_return": 0.63065,
-            "excess": -0.56172,
+            "buy_hold_return": 0.62963,
+            "excess": -0.5607,
             "strategy_maxdd": -0.2542,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.5224
@@ -677,24 +708,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.04282,
-            "buy_hold_return": -0.17653,
-            "excess": 0.1337,
+            "buy_hold_return": -0.17704,
+            "excess": 0.13422,
             "strategy_maxdd": -0.06482,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.3551
           },
           "1y": {
             "strategy_return": 0.02029,
-            "buy_hold_return": 0.08162,
-            "excess": -0.06133,
+            "buy_hold_return": 0.08094,
+            "excess": -0.06065,
             "strategy_maxdd": -0.06952,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.3551
           },
           "3y": {
             "strategy_return": 0.02525,
-            "buy_hold_return": 0.63065,
-            "excess": -0.6054,
+            "buy_hold_return": 0.62963,
+            "excess": -0.60438,
             "strategy_maxdd": -0.20262,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.3551
@@ -703,24 +734,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.07434,
-            "buy_hold_return": -0.17653,
-            "excess": 0.10218,
+            "buy_hold_return": -0.17704,
+            "excess": 0.1027,
             "strategy_maxdd": -0.09659,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.293
           },
           "1y": {
             "strategy_return": -0.02948,
-            "buy_hold_return": 0.08162,
-            "excess": -0.1111,
+            "buy_hold_return": 0.08094,
+            "excess": -0.11042,
             "strategy_maxdd": -0.12232,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.293
           },
           "3y": {
             "strategy_return": -0.00182,
-            "buy_hold_return": 0.63065,
-            "excess": -0.63247,
+            "buy_hold_return": 0.62963,
+            "excess": -0.63145,
             "strategy_maxdd": -0.13099,
             "buy_hold_maxdd": -0.2948,
             "exposure": 0.293
@@ -728,20 +759,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": -0.17653,
-            "buy_hold_return": -0.17653,
+            "strategy_return": -0.17704,
+            "buy_hold_return": -0.17704,
             "strategy_maxdd": -0.2948,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.08162,
-            "buy_hold_return": 0.08162,
+            "strategy_return": 0.08094,
+            "buy_hold_return": 0.08094,
             "strategy_maxdd": -0.2948,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.63065,
-            "buy_hold_return": 0.63065,
+            "strategy_return": 0.62963,
+            "buy_hold_return": 0.62963,
             "strategy_maxdd": -0.2948,
             "exposure": 1
           }
@@ -752,36 +783,40 @@
       "ticker": "IEMO.MI",
       "name": "iShares Edge MSCI Europe Momentum Factor UCITS ETF",
       "category": "MOMENTUM",
-      "last_price": 15.13,
+      "last_price": 15.128,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 15.2643,
-      "kama_slow": 15.4792,
+      "kama_fast": 15.2641,
+      "kama_slow": 15.4791,
       "metrics": {
         "Kamal5": {
           "6m": {
             "strategy_return": -0.13521,
-            "buy_hold_return": -0.03655,
-            "excess": -0.09866,
+            "buy_hold_return": -0.03668,
+            "excess": -0.09853,
             "strategy_maxdd": -0.14277,
             "buy_hold_maxdd": -0.09452,
             "exposure": 0.5721
           },
           "1y": {
             "strategy_return": -0.07951,
-            "buy_hold_return": 0.08412,
-            "excess": -0.16363,
+            "buy_hold_return": 0.08398,
+            "excess": -0.16349,
             "strategy_maxdd": -0.16658,
             "buy_hold_maxdd": -0.1159,
             "exposure": 0.5721
           },
           "3y": {
             "strategy_return": 0.04476,
-            "buy_hold_return": 0.62723,
-            "excess": -0.58247,
+            "buy_hold_return": 0.62702,
+            "excess": -0.58225,
             "strategy_maxdd": -0.16658,
             "buy_hold_maxdd": -0.15899,
             "exposure": 0.5721
@@ -790,24 +825,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.1222,
-            "buy_hold_return": -0.03655,
-            "excess": -0.08565,
+            "buy_hold_return": -0.03668,
+            "excess": -0.08552,
             "strategy_maxdd": -0.13163,
             "buy_hold_maxdd": -0.09452,
             "exposure": 0.4334
           },
           "1y": {
             "strategy_return": -0.16151,
-            "buy_hold_return": 0.08412,
-            "excess": -0.24563,
+            "buy_hold_return": 0.08398,
+            "excess": -0.24549,
             "strategy_maxdd": -0.24082,
             "buy_hold_maxdd": -0.1159,
             "exposure": 0.4334
           },
           "3y": {
             "strategy_return": -0.06771,
-            "buy_hold_return": 0.62723,
-            "excess": -0.69494,
+            "buy_hold_return": 0.62702,
+            "excess": -0.69473,
             "strategy_maxdd": -0.24082,
             "buy_hold_maxdd": -0.15899,
             "exposure": 0.4334
@@ -816,24 +851,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.13101,
-            "buy_hold_return": -0.03655,
-            "excess": -0.09446,
+            "buy_hold_return": -0.03668,
+            "excess": -0.09433,
             "strategy_maxdd": -0.13861,
             "buy_hold_maxdd": -0.09452,
             "exposure": 0.3633
           },
           "1y": {
             "strategy_return": -0.14983,
-            "buy_hold_return": 0.08412,
-            "excess": -0.23395,
+            "buy_hold_return": 0.08398,
+            "excess": -0.23381,
             "strategy_maxdd": -0.23024,
             "buy_hold_maxdd": -0.1159,
             "exposure": 0.3633
           },
           "3y": {
             "strategy_return": -0.07372,
-            "buy_hold_return": 0.62723,
-            "excess": -0.70095,
+            "buy_hold_return": 0.62702,
+            "excess": -0.70073,
             "strategy_maxdd": -0.23024,
             "buy_hold_maxdd": -0.15899,
             "exposure": 0.3633
@@ -841,20 +876,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": -0.03655,
-            "buy_hold_return": -0.03655,
+            "strategy_return": -0.03668,
+            "buy_hold_return": -0.03668,
             "strategy_maxdd": -0.09452,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.08412,
-            "buy_hold_return": 0.08412,
+            "strategy_return": 0.08398,
+            "buy_hold_return": 0.08398,
             "strategy_maxdd": -0.1159,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.62723,
-            "buy_hold_return": 0.62723,
+            "strategy_return": 0.62702,
+            "buy_hold_return": 0.62702,
             "strategy_maxdd": -0.15899,
             "exposure": 1
           }
@@ -865,36 +900,40 @@
       "ticker": "IWVL.MI",
       "name": "iShares Edge MSCI World Value Factor UCITS ETF",
       "category": "VALUE",
-      "last_price": 67.43,
+      "last_price": 67.4,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 68.1498,
-      "kama_slow": 68.5135,
+      "kama_fast": 68.1483,
+      "kama_slow": 68.5126,
       "metrics": {
         "Kamal5": {
           "6m": {
             "strategy_return": -0.08993,
-            "buy_hold_return": -0.0295,
-            "excess": -0.06043,
+            "buy_hold_return": -0.02994,
+            "excess": -0.06,
             "strategy_maxdd": -0.09924,
             "buy_hold_maxdd": -0.10623,
             "exposure": 0.6068
           },
           "1y": {
             "strategy_return": 0.17212,
-            "buy_hold_return": 0.36319,
-            "excess": -0.19106,
+            "buy_hold_return": 0.36258,
+            "excess": -0.19046,
             "strategy_maxdd": -0.09924,
             "buy_hold_maxdd": -0.10623,
             "exposure": 0.6068
           },
           "3y": {
             "strategy_return": 0.45927,
-            "buy_hold_return": 0.91671,
-            "excess": -0.45744,
+            "buy_hold_return": 0.91586,
+            "excess": -0.45659,
             "strategy_maxdd": -0.09924,
             "buy_hold_maxdd": -0.17734,
             "exposure": 0.6068
@@ -903,24 +942,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.04625,
-            "buy_hold_return": -0.0295,
-            "excess": -0.01674,
+            "buy_hold_return": -0.02994,
+            "excess": -0.01631,
             "strategy_maxdd": -0.05601,
             "buy_hold_maxdd": -0.10623,
             "exposure": 0.4972
           },
           "1y": {
             "strategy_return": 0.20948,
-            "buy_hold_return": 0.36319,
-            "excess": -0.1537,
+            "buy_hold_return": 0.36258,
+            "excess": -0.1531,
             "strategy_maxdd": -0.05601,
             "buy_hold_maxdd": -0.10623,
             "exposure": 0.4972
           },
           "3y": {
             "strategy_return": 0.28938,
-            "buy_hold_return": 0.91671,
-            "excess": -0.62734,
+            "buy_hold_return": 0.91586,
+            "excess": -0.62648,
             "strategy_maxdd": -0.11475,
             "buy_hold_maxdd": -0.17734,
             "exposure": 0.4972
@@ -929,24 +968,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.03588,
-            "buy_hold_return": -0.0295,
-            "excess": -0.00637,
+            "buy_hold_return": -0.02994,
+            "excess": -0.00594,
             "strategy_maxdd": -0.04574,
             "buy_hold_maxdd": -0.10623,
             "exposure": 0.4177
           },
           "1y": {
             "strategy_return": 0.18937,
-            "buy_hold_return": 0.36319,
-            "excess": -0.17381,
+            "buy_hold_return": 0.36258,
+            "excess": -0.17321,
             "strategy_maxdd": -0.04943,
             "buy_hold_maxdd": -0.10623,
             "exposure": 0.4177
           },
           "3y": {
             "strategy_return": 0.29094,
-            "buy_hold_return": 0.91671,
-            "excess": -0.62578,
+            "buy_hold_return": 0.91586,
+            "excess": -0.62492,
             "strategy_maxdd": -0.04943,
             "buy_hold_maxdd": -0.17734,
             "exposure": 0.4177
@@ -954,20 +993,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": -0.0295,
-            "buy_hold_return": -0.0295,
+            "strategy_return": -0.02994,
+            "buy_hold_return": -0.02994,
             "strategy_maxdd": -0.10623,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.36319,
-            "buy_hold_return": 0.36319,
+            "strategy_return": 0.36258,
+            "buy_hold_return": 0.36258,
             "strategy_maxdd": -0.10623,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.91671,
-            "buy_hold_return": 0.91671,
+            "strategy_return": 0.91586,
+            "buy_hold_return": 0.91586,
             "strategy_maxdd": -0.17734,
             "exposure": 1
           }
@@ -978,36 +1017,40 @@
       "ticker": "XDEV.MI",
       "name": "Xtrackers MSCI World Value UCITS ETF 1C",
       "category": "VALUE",
-      "last_price": 69.78,
+      "last_price": 69.86,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 70.5742,
-      "kama_slow": 71.0064,
+      "kama_fast": 70.5782,
+      "kama_slow": 71.0088,
       "metrics": {
         "Kamal5": {
           "6m": {
             "strategy_return": -0.11587,
-            "buy_hold_return": -0.02569,
-            "excess": -0.09018,
+            "buy_hold_return": -0.02457,
+            "excess": -0.09129,
             "strategy_maxdd": -0.12623,
             "buy_hold_maxdd": -0.1063,
             "exposure": 0.6178
           },
           "1y": {
             "strategy_return": 0.1765,
-            "buy_hold_return": 0.36877,
-            "excess": -0.19228,
+            "buy_hold_return": 0.37034,
+            "excess": -0.19385,
             "strategy_maxdd": -0.12623,
             "buy_hold_maxdd": -0.1063,
             "exposure": 0.6178
           },
           "3y": {
             "strategy_return": 0.41702,
-            "buy_hold_return": 0.92603,
-            "excess": -0.50901,
+            "buy_hold_return": 0.92824,
+            "excess": -0.51121,
             "strategy_maxdd": -0.12623,
             "buy_hold_maxdd": -0.17802,
             "exposure": 0.6178
@@ -1016,24 +1059,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.05189,
-            "buy_hold_return": -0.02569,
-            "excess": -0.0262,
+            "buy_hold_return": -0.02457,
+            "excess": -0.02732,
             "strategy_maxdd": -0.06301,
             "buy_hold_maxdd": -0.1063,
             "exposure": 0.5043
           },
           "1y": {
             "strategy_return": 0.19226,
-            "buy_hold_return": 0.36877,
-            "excess": -0.17651,
+            "buy_hold_return": 0.37034,
+            "excess": -0.17808,
             "strategy_maxdd": -0.06301,
             "buy_hold_maxdd": -0.1063,
             "exposure": 0.5043
           },
           "3y": {
             "strategy_return": 0.24646,
-            "buy_hold_return": 0.92603,
-            "excess": -0.67957,
+            "buy_hold_return": 0.92824,
+            "excess": -0.68177,
             "strategy_maxdd": -0.11342,
             "buy_hold_maxdd": -0.17802,
             "exposure": 0.5043
@@ -1042,24 +1085,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.04757,
-            "buy_hold_return": -0.02569,
-            "excess": -0.02187,
+            "buy_hold_return": -0.02457,
+            "excess": -0.02299,
             "strategy_maxdd": -0.05873,
             "buy_hold_maxdd": -0.1063,
             "exposure": 0.4279
           },
           "1y": {
             "strategy_return": 0.18903,
-            "buy_hold_return": 0.36877,
-            "excess": -0.17974,
+            "buy_hold_return": 0.37034,
+            "excess": -0.18131,
             "strategy_maxdd": -0.05873,
             "buy_hold_maxdd": -0.1063,
             "exposure": 0.4279
           },
           "3y": {
             "strategy_return": 0.21878,
-            "buy_hold_return": 0.92603,
-            "excess": -0.70725,
+            "buy_hold_return": 0.92824,
+            "excess": -0.70946,
             "strategy_maxdd": -0.0742,
             "buy_hold_maxdd": -0.17802,
             "exposure": 0.4279
@@ -1067,20 +1110,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": -0.02569,
-            "buy_hold_return": -0.02569,
+            "strategy_return": -0.02457,
+            "buy_hold_return": -0.02457,
             "strategy_maxdd": -0.1063,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.36877,
-            "buy_hold_return": 0.36877,
+            "strategy_return": 0.37034,
+            "buy_hold_return": 0.37034,
             "strategy_maxdd": -0.1063,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.92603,
-            "buy_hold_return": 0.92603,
+            "strategy_return": 0.92824,
+            "buy_hold_return": 0.92824,
             "strategy_maxdd": -0.17802,
             "exposure": 1
           }
@@ -1091,36 +1134,40 @@
       "ticker": "IEVL.MI",
       "name": "iShares Edge MSCI Europe Value Factor UCITS ETF",
       "category": "VALUE",
-      "last_price": 13.714,
+      "last_price": 13.692,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 1,
         "Ibrida": 1
       },
-      "kama_fast": 13.6515,
-      "kama_slow": 13.6453,
+      "kama_fast": 13.6508,
+      "kama_slow": 13.6451,
       "metrics": {
         "Kamal5": {
           "6m": {
-            "strategy_return": -0.06853,
-            "buy_hold_return": 0.01345,
-            "excess": -0.08198,
+            "strategy_return": -0.07003,
+            "buy_hold_return": 0.01182,
+            "excess": -0.08185,
             "strategy_maxdd": -0.10215,
             "buy_hold_maxdd": -0.06911,
             "exposure": 0.5847
           },
           "1y": {
-            "strategy_return": 0.0834,
-            "buy_hold_return": 0.20637,
-            "excess": -0.12297,
+            "strategy_return": 0.08166,
+            "buy_hold_return": 0.20443,
+            "excess": -0.12277,
             "strategy_maxdd": -0.11643,
             "buy_hold_maxdd": -0.0985,
             "exposure": 0.5847
           },
           "3y": {
-            "strategy_return": 0.48258,
-            "buy_hold_return": 0.79151,
-            "excess": -0.30893,
+            "strategy_return": 0.4802,
+            "buy_hold_return": 0.78863,
+            "excess": -0.30843,
             "strategy_maxdd": -0.11643,
             "buy_hold_maxdd": -0.17524,
             "exposure": 0.5847
@@ -1129,24 +1176,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.03088,
-            "buy_hold_return": 0.01345,
-            "excess": -0.04433,
+            "buy_hold_return": 0.01182,
+            "excess": -0.0427,
             "strategy_maxdd": -0.05604,
             "buy_hold_maxdd": -0.06911,
             "exposure": 0.4641
           },
           "1y": {
             "strategy_return": 0.06016,
-            "buy_hold_return": 0.20637,
-            "excess": -0.14621,
+            "buy_hold_return": 0.20443,
+            "excess": -0.14428,
             "strategy_maxdd": -0.05604,
             "buy_hold_maxdd": -0.0985,
             "exposure": 0.4641
           },
           "3y": {
             "strategy_return": 0.30581,
-            "buy_hold_return": 0.79151,
-            "excess": -0.4857,
+            "buy_hold_return": 0.78863,
+            "excess": -0.48283,
             "strategy_maxdd": -0.06062,
             "buy_hold_maxdd": -0.17524,
             "exposure": 0.4641
@@ -1155,24 +1202,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.08212,
-            "buy_hold_return": 0.01345,
-            "excess": -0.09557,
+            "buy_hold_return": 0.01182,
+            "excess": -0.09394,
             "strategy_maxdd": -0.09173,
             "buy_hold_maxdd": -0.06911,
             "exposure": 0.3853
           },
           "1y": {
             "strategy_return": -0.01379,
-            "buy_hold_return": 0.20637,
-            "excess": -0.22016,
+            "buy_hold_return": 0.20443,
+            "excess": -0.21823,
             "strategy_maxdd": -0.10617,
             "buy_hold_maxdd": -0.0985,
             "exposure": 0.3853
           },
           "3y": {
             "strategy_return": 0.19026,
-            "buy_hold_return": 0.79151,
-            "excess": -0.60125,
+            "buy_hold_return": 0.78863,
+            "excess": -0.59838,
             "strategy_maxdd": -0.10617,
             "buy_hold_maxdd": -0.17524,
             "exposure": 0.3853
@@ -1180,20 +1227,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": 0.01345,
-            "buy_hold_return": 0.01345,
+            "strategy_return": 0.01182,
+            "buy_hold_return": 0.01182,
             "strategy_maxdd": -0.06911,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.20637,
-            "buy_hold_return": 0.20637,
+            "strategy_return": 0.20443,
+            "buy_hold_return": 0.20443,
             "strategy_maxdd": -0.0985,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.79151,
-            "buy_hold_return": 0.79151,
+            "strategy_return": 0.78863,
+            "buy_hold_return": 0.78863,
             "strategy_maxdd": -0.17524,
             "exposure": 1
           }
@@ -1204,36 +1251,40 @@
       "ticker": "IWQU.MI",
       "name": "iShares Edge MSCI World Quality Factor UCITS ETF",
       "category": "QUALITY",
-      "last_price": 80.13,
+      "last_price": 80.15,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 79.876,
-      "kama_slow": 79.9552,
+      "kama_fast": 79.8762,
+      "kama_slow": 79.9553,
       "metrics": {
         "Kamal5": {
           "6m": {
-            "strategy_return": -0.04082,
-            "buy_hold_return": 0.07111,
-            "excess": -0.11194,
+            "strategy_return": -0.04058,
+            "buy_hold_return": 0.07138,
+            "excess": -0.11197,
             "strategy_maxdd": -0.07175,
             "buy_hold_maxdd": -0.05851,
             "exposure": 0.5894
           },
           "1y": {
-            "strategy_return": 0.05605,
-            "buy_hold_return": 0.1836,
-            "excess": -0.12756,
+            "strategy_return": 0.05631,
+            "buy_hold_return": 0.1839,
+            "excess": -0.12759,
             "strategy_maxdd": -0.07175,
             "buy_hold_maxdd": -0.06331,
             "exposure": 0.5894
           },
           "3y": {
-            "strategy_return": 0.23679,
-            "buy_hold_return": 0.55804,
-            "excess": -0.32125,
+            "strategy_return": 0.2371,
+            "buy_hold_return": 0.55843,
+            "excess": -0.32133,
             "strategy_maxdd": -0.09663,
             "buy_hold_maxdd": -0.206,
             "exposure": 0.5894
@@ -1242,24 +1293,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.04614,
-            "buy_hold_return": 0.07111,
-            "excess": -0.11725,
+            "buy_hold_return": 0.07138,
+            "excess": -0.11752,
             "strategy_maxdd": -0.07236,
             "buy_hold_maxdd": -0.05851,
             "exposure": 0.4697
           },
           "1y": {
             "strategy_return": -0.00285,
-            "buy_hold_return": 0.1836,
-            "excess": -0.18646,
+            "buy_hold_return": 0.1839,
+            "excess": -0.18675,
             "strategy_maxdd": -0.07236,
             "buy_hold_maxdd": -0.06331,
             "exposure": 0.4697
           },
           "3y": {
             "strategy_return": 0.06895,
-            "buy_hold_return": 0.55804,
-            "excess": -0.48909,
+            "buy_hold_return": 0.55843,
+            "excess": -0.48947,
             "strategy_maxdd": -0.09209,
             "buy_hold_maxdd": -0.206,
             "exposure": 0.4697
@@ -1268,24 +1319,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.05934,
-            "buy_hold_return": 0.07111,
-            "excess": -0.13046,
+            "buy_hold_return": 0.07138,
+            "excess": -0.13072,
             "strategy_maxdd": -0.06678,
             "buy_hold_maxdd": -0.05851,
             "exposure": 0.4027
           },
           "1y": {
             "strategy_return": -0.01452,
-            "buy_hold_return": 0.1836,
-            "excess": -0.19812,
+            "buy_hold_return": 0.1839,
+            "excess": -0.19842,
             "strategy_maxdd": -0.06956,
             "buy_hold_maxdd": -0.06331,
             "exposure": 0.4027
           },
           "3y": {
             "strategy_return": 0.06685,
-            "buy_hold_return": 0.55804,
-            "excess": -0.49119,
+            "buy_hold_return": 0.55843,
+            "excess": -0.49158,
             "strategy_maxdd": -0.08509,
             "buy_hold_maxdd": -0.206,
             "exposure": 0.4027
@@ -1293,20 +1344,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": 0.07111,
-            "buy_hold_return": 0.07111,
+            "strategy_return": 0.07138,
+            "buy_hold_return": 0.07138,
             "strategy_maxdd": -0.05851,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.1836,
-            "buy_hold_return": 0.1836,
+            "strategy_return": 0.1839,
+            "buy_hold_return": 0.1839,
             "strategy_maxdd": -0.06331,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.55804,
-            "buy_hold_return": 0.55804,
+            "strategy_return": 0.55843,
+            "buy_hold_return": 0.55843,
             "strategy_maxdd": -0.206,
             "exposure": 1
           }
@@ -1317,7 +1368,11 @@
       "ticker": "IEQU.MI",
       "name": "iShares Edge MSCI Europe Quality Factor UCITS ETF",
       "category": "QUALITY",
-      "last_price": 12.446,
+      "last_price": 12.442,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
@@ -1328,25 +1383,25 @@
       "metrics": {
         "Kamal5": {
           "6m": {
-            "strategy_return": 0.00089,
-            "buy_hold_return": 0.07238,
-            "excess": -0.07149,
+            "strategy_return": 0.00057,
+            "buy_hold_return": 0.07203,
+            "excess": -0.07146,
             "strategy_maxdd": -0.04705,
             "buy_hold_maxdd": -0.04967,
             "exposure": 0.5587
           },
           "1y": {
-            "strategy_return": -0.05266,
-            "buy_hold_return": 0.14267,
-            "excess": -0.19533,
+            "strategy_return": -0.05296,
+            "buy_hold_return": 0.14231,
+            "excess": -0.19527,
             "strategy_maxdd": -0.10534,
             "buy_hold_maxdd": -0.08514,
             "exposure": 0.5587
           },
           "3y": {
-            "strategy_return": 0.00063,
-            "buy_hold_return": 0.33727,
-            "excess": -0.33664,
+            "strategy_return": 0.00031,
+            "buy_hold_return": 0.33684,
+            "excess": -0.33654,
             "strategy_maxdd": -0.10534,
             "buy_hold_maxdd": -0.1478,
             "exposure": 0.5587
@@ -1355,24 +1410,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": 0.02533,
-            "buy_hold_return": 0.07238,
-            "excess": -0.04705,
+            "buy_hold_return": 0.07203,
+            "excess": -0.0467,
             "strategy_maxdd": -0.03886,
             "buy_hold_maxdd": -0.04967,
             "exposure": 0.4121
           },
           "1y": {
             "strategy_return": -0.0147,
-            "buy_hold_return": 0.14267,
-            "excess": -0.15737,
+            "buy_hold_return": 0.14231,
+            "excess": -0.157,
             "strategy_maxdd": -0.08936,
             "buy_hold_maxdd": -0.08514,
             "exposure": 0.4121
           },
           "3y": {
             "strategy_return": 0.00513,
-            "buy_hold_return": 0.33727,
-            "excess": -0.33214,
+            "buy_hold_return": 0.33684,
+            "excess": -0.33171,
             "strategy_maxdd": -0.10195,
             "buy_hold_maxdd": -0.1478,
             "exposure": 0.4121
@@ -1381,24 +1436,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.0257,
-            "buy_hold_return": 0.07238,
-            "excess": -0.09807,
+            "buy_hold_return": 0.07203,
+            "excess": -0.09773,
             "strategy_maxdd": -0.06276,
             "buy_hold_maxdd": -0.04967,
             "exposure": 0.3412
           },
           "1y": {
             "strategy_return": -0.05835,
-            "buy_hold_return": 0.14267,
-            "excess": -0.20102,
+            "buy_hold_return": 0.14231,
+            "excess": -0.20065,
             "strategy_maxdd": -0.10526,
             "buy_hold_maxdd": -0.08514,
             "exposure": 0.3412
           },
           "3y": {
             "strategy_return": -0.03731,
-            "buy_hold_return": 0.33727,
-            "excess": -0.37458,
+            "buy_hold_return": 0.33684,
+            "excess": -0.37415,
             "strategy_maxdd": -0.10526,
             "buy_hold_maxdd": -0.1478,
             "exposure": 0.3412
@@ -1406,20 +1461,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": 0.07238,
-            "buy_hold_return": 0.07238,
+            "strategy_return": 0.07203,
+            "buy_hold_return": 0.07203,
             "strategy_maxdd": -0.04967,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.14267,
-            "buy_hold_return": 0.14267,
+            "strategy_return": 0.14231,
+            "buy_hold_return": 0.14231,
             "strategy_maxdd": -0.08514,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.33727,
-            "buy_hold_return": 0.33727,
+            "strategy_return": 0.33684,
+            "buy_hold_return": 0.33684,
             "strategy_maxdd": -0.1478,
             "exposure": 1
           }
@@ -1430,36 +1485,40 @@
       "ticker": "IAPD.MI",
       "name": "iShares Asia Pacific Dividend UCITS ETF",
       "category": "HIGH_DIVIDEND",
-      "last_price": 27.75,
+      "last_price": 27.73,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 27.7186,
-      "kama_slow": 27.9971,
+      "kama_fast": 27.7172,
+      "kama_slow": 27.9966,
       "metrics": {
         "Kamal5": {
           "6m": {
             "strategy_return": 0.01954,
-            "buy_hold_return": 0.05299,
-            "excess": -0.03345,
+            "buy_hold_return": 0.05223,
+            "excess": -0.03269,
             "strategy_maxdd": -0.04385,
             "buy_hold_maxdd": -0.05715,
             "exposure": 0.5926
           },
           "1y": {
             "strategy_return": 0.06815,
-            "buy_hold_return": 0.21871,
-            "excess": -0.15055,
+            "buy_hold_return": 0.21783,
+            "excess": -0.14967,
             "strategy_maxdd": -0.08895,
             "buy_hold_maxdd": -0.06151,
             "exposure": 0.5926
           },
           "3y": {
             "strategy_return": 0.22736,
-            "buy_hold_return": 0.71773,
-            "excess": -0.49037,
+            "buy_hold_return": 0.71649,
+            "excess": -0.48913,
             "strategy_maxdd": -0.12429,
             "buy_hold_maxdd": -0.20161,
             "exposure": 0.5926
@@ -1468,24 +1527,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.02323,
-            "buy_hold_return": 0.05299,
-            "excess": -0.07621,
+            "buy_hold_return": 0.05223,
+            "excess": -0.07545,
             "strategy_maxdd": -0.07528,
             "buy_hold_maxdd": -0.05715,
             "exposure": 0.4957
           },
           "1y": {
             "strategy_return": 0.03935,
-            "buy_hold_return": 0.21871,
-            "excess": -0.17935,
+            "buy_hold_return": 0.21783,
+            "excess": -0.17848,
             "strategy_maxdd": -0.08494,
             "buy_hold_maxdd": -0.06151,
             "exposure": 0.4957
           },
           "3y": {
             "strategy_return": 0.1529,
-            "buy_hold_return": 0.71773,
-            "excess": -0.56484,
+            "buy_hold_return": 0.71649,
+            "excess": -0.5636,
             "strategy_maxdd": -0.09133,
             "buy_hold_maxdd": -0.20161,
             "exposure": 0.4957
@@ -1494,24 +1553,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.04072,
-            "buy_hold_return": 0.05299,
-            "excess": -0.0937,
+            "buy_hold_return": 0.05223,
+            "excess": -0.09294,
             "strategy_maxdd": -0.08968,
             "buy_hold_maxdd": -0.05715,
             "exposure": 0.405
           },
           "1y": {
             "strategy_return": 0.00628,
-            "buy_hold_return": 0.21871,
-            "excess": -0.21243,
+            "buy_hold_return": 0.21783,
+            "excess": -0.21155,
             "strategy_maxdd": -0.10425,
             "buy_hold_maxdd": -0.06151,
             "exposure": 0.405
           },
           "3y": {
             "strategy_return": 0.0785,
-            "buy_hold_return": 0.71773,
-            "excess": -0.63923,
+            "buy_hold_return": 0.71649,
+            "excess": -0.63799,
             "strategy_maxdd": -0.10469,
             "buy_hold_maxdd": -0.20161,
             "exposure": 0.405
@@ -1519,20 +1578,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": 0.05299,
-            "buy_hold_return": 0.05299,
+            "strategy_return": 0.05223,
+            "buy_hold_return": 0.05223,
             "strategy_maxdd": -0.05715,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.21871,
-            "buy_hold_return": 0.21871,
+            "strategy_return": 0.21783,
+            "buy_hold_return": 0.21783,
             "strategy_maxdd": -0.06151,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.71773,
-            "buy_hold_return": 0.71773,
+            "strategy_return": 0.71649,
+            "buy_hold_return": 0.71649,
             "strategy_maxdd": -0.20161,
             "exposure": 1
           }
@@ -1543,36 +1602,40 @@
       "ticker": "QDVB.DE",
       "name": "iShares Edge MSCI USA Quality Factor UCITS ETF",
       "category": "QUALITY",
-      "last_price": 16.906,
+      "last_price": 16.896,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 1,
         "Ibrida": 1
       },
-      "kama_fast": 16.878,
-      "kama_slow": 16.8291,
+      "kama_fast": 16.8779,
+      "kama_slow": 16.829,
       "metrics": {
         "Kamal5": {
           "6m": {
-            "strategy_return": -0.04473,
-            "buy_hold_return": 0.07531,
-            "excess": -0.12004,
+            "strategy_return": -0.0453,
+            "buy_hold_return": 0.07467,
+            "excess": -0.11997,
             "strategy_maxdd": -0.07351,
             "buy_hold_maxdd": -0.0599,
             "exposure": 0.5813
           },
           "1y": {
-            "strategy_return": -0.00126,
-            "buy_hold_return": 0.18522,
-            "excess": -0.18648,
+            "strategy_return": -0.00185,
+            "buy_hold_return": 0.18452,
+            "excess": -0.18637,
             "strategy_maxdd": -0.07351,
             "buy_hold_maxdd": -0.0674,
             "exposure": 0.5813
           },
           "3y": {
-            "strategy_return": 0.11141,
-            "buy_hold_return": 0.57764,
-            "excess": -0.46624,
+            "strategy_return": 0.11075,
+            "buy_hold_return": 0.57671,
+            "excess": -0.46596,
             "strategy_maxdd": -0.12369,
             "buy_hold_maxdd": -0.22656,
             "exposure": 0.5813
@@ -1581,24 +1644,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.04592,
-            "buy_hold_return": 0.07531,
-            "excess": -0.12123,
+            "buy_hold_return": 0.07467,
+            "excess": -0.12059,
             "strategy_maxdd": -0.06245,
             "buy_hold_maxdd": -0.0599,
             "exposure": 0.4423
           },
           "1y": {
             "strategy_return": -0.02161,
-            "buy_hold_return": 0.18522,
-            "excess": -0.20683,
+            "buy_hold_return": 0.18452,
+            "excess": -0.20613,
             "strategy_maxdd": -0.06245,
             "buy_hold_maxdd": -0.0674,
             "exposure": 0.4423
           },
           "3y": {
             "strategy_return": 0.06685,
-            "buy_hold_return": 0.57764,
-            "excess": -0.51079,
+            "buy_hold_return": 0.57671,
+            "excess": -0.50986,
             "strategy_maxdd": -0.08436,
             "buy_hold_maxdd": -0.22656,
             "exposure": 0.4423
@@ -1607,24 +1670,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.04085,
-            "buy_hold_return": 0.07531,
-            "excess": -0.11616,
+            "buy_hold_return": 0.07467,
+            "excess": -0.11552,
             "strategy_maxdd": -0.06245,
             "buy_hold_maxdd": -0.0599,
             "exposure": 0.3778
           },
           "1y": {
             "strategy_return": -0.03535,
-            "buy_hold_return": 0.18522,
-            "excess": -0.22057,
+            "buy_hold_return": 0.18452,
+            "excess": -0.21987,
             "strategy_maxdd": -0.06245,
             "buy_hold_maxdd": -0.0674,
             "exposure": 0.3778
           },
           "3y": {
             "strategy_return": 0.03732,
-            "buy_hold_return": 0.57764,
-            "excess": -0.54032,
+            "buy_hold_return": 0.57671,
+            "excess": -0.53939,
             "strategy_maxdd": -0.11018,
             "buy_hold_maxdd": -0.22656,
             "exposure": 0.3778
@@ -1632,20 +1695,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": 0.07531,
-            "buy_hold_return": 0.07531,
+            "strategy_return": 0.07467,
+            "buy_hold_return": 0.07467,
             "strategy_maxdd": -0.0599,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.18522,
-            "buy_hold_return": 0.18522,
+            "strategy_return": 0.18452,
+            "buy_hold_return": 0.18452,
             "strategy_maxdd": -0.0674,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.57764,
-            "buy_hold_return": 0.57764,
+            "strategy_return": 0.57671,
+            "buy_hold_return": 0.57671,
             "strategy_maxdd": -0.22656,
             "exposure": 1
           }
@@ -1656,36 +1719,40 @@
       "ticker": "XDEQ.MI",
       "name": "Xtrackers MSCI World Quality UCITS ETF 1C",
       "category": "QUALITY",
-      "last_price": 81.67,
+      "last_price": 81.57,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 81.3485,
-      "kama_slow": 81.4035,
+      "kama_fast": 81.3474,
+      "kama_slow": 81.403,
       "metrics": {
         "Kamal5": {
           "6m": {
-            "strategy_return": -0.03084,
-            "buy_hold_return": 0.07235,
-            "excess": -0.10319,
+            "strategy_return": -0.03203,
+            "buy_hold_return": 0.07103,
+            "excess": -0.10306,
             "strategy_maxdd": -0.06846,
             "buy_hold_maxdd": -0.06028,
             "exposure": 0.5902
           },
           "1y": {
-            "strategy_return": 0.06872,
-            "buy_hold_return": 0.18362,
-            "excess": -0.1149,
+            "strategy_return": 0.06741,
+            "buy_hold_return": 0.18217,
+            "excess": -0.11476,
             "strategy_maxdd": -0.06846,
             "buy_hold_maxdd": -0.06303,
             "exposure": 0.5902
           },
           "3y": {
-            "strategy_return": 0.24662,
-            "buy_hold_return": 0.56276,
-            "excess": -0.31615,
+            "strategy_return": 0.24509,
+            "buy_hold_return": 0.56085,
+            "excess": -0.31576,
             "strategy_maxdd": -0.09547,
             "buy_hold_maxdd": -0.20589,
             "exposure": 0.5902
@@ -1694,24 +1761,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.0426,
-            "buy_hold_return": 0.07235,
-            "excess": -0.11495,
+            "buy_hold_return": 0.07103,
+            "excess": -0.11363,
             "strategy_maxdd": -0.07234,
             "buy_hold_maxdd": -0.06028,
             "exposure": 0.4563
           },
           "1y": {
             "strategy_return": -4e-05,
-            "buy_hold_return": 0.18362,
-            "excess": -0.18366,
+            "buy_hold_return": 0.18217,
+            "excess": -0.18221,
             "strategy_maxdd": -0.07234,
             "buy_hold_maxdd": -0.06303,
             "exposure": 0.4563
           },
           "3y": {
             "strategy_return": 0.08472,
-            "buy_hold_return": 0.56276,
-            "excess": -0.47805,
+            "buy_hold_return": 0.56085,
+            "excess": -0.47613,
             "strategy_maxdd": -0.08685,
             "buy_hold_maxdd": -0.20589,
             "exposure": 0.4563
@@ -1720,24 +1787,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.05095,
-            "buy_hold_return": 0.07235,
-            "excess": -0.1233,
+            "buy_hold_return": 0.07103,
+            "excess": -0.12198,
             "strategy_maxdd": -0.06321,
             "buy_hold_maxdd": -0.06028,
             "exposure": 0.3956
           },
           "1y": {
             "strategy_return": 0.00644,
-            "buy_hold_return": 0.18362,
-            "excess": -0.17718,
+            "buy_hold_return": 0.18217,
+            "excess": -0.17573,
             "strategy_maxdd": -0.06321,
             "buy_hold_maxdd": -0.06303,
             "exposure": 0.3956
           },
           "3y": {
             "strategy_return": 0.07055,
-            "buy_hold_return": 0.56276,
-            "excess": -0.49221,
+            "buy_hold_return": 0.56085,
+            "excess": -0.4903,
             "strategy_maxdd": -0.08466,
             "buy_hold_maxdd": -0.20589,
             "exposure": 0.3956
@@ -1745,20 +1812,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": 0.07235,
-            "buy_hold_return": 0.07235,
+            "strategy_return": 0.07103,
+            "buy_hold_return": 0.07103,
             "strategy_maxdd": -0.06028,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.18362,
-            "buy_hold_return": 0.18362,
+            "strategy_return": 0.18217,
+            "buy_hold_return": 0.18217,
             "strategy_maxdd": -0.06303,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.56276,
-            "buy_hold_return": 0.56276,
+            "strategy_return": 0.56085,
+            "buy_hold_return": 0.56085,
             "strategy_maxdd": -0.20589,
             "exposure": 1
           }
@@ -1770,6 +1837,10 @@
       "name": "Amundi MSCI Europe Quality Factor UCITS ETF EUR Acc",
       "category": "QUALITY",
       "last_price": 127.68,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
@@ -1882,36 +1953,40 @@
       "ticker": "QDVI.DE",
       "name": "iShares Edge MSCI USA Value Factor UCITS ETF",
       "category": "VALUE",
-      "last_price": 15.798,
+      "last_price": 15.792,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 0,
         "Ibrida": 0
       },
-      "kama_fast": 16.0002,
-      "kama_slow": 16.0933,
+      "kama_fast": 15.9999,
+      "kama_slow": 16.0932,
       "metrics": {
         "Kamal5": {
           "6m": {
             "strategy_return": -0.12343,
-            "buy_hold_return": -0.0408,
-            "excess": -0.08263,
+            "buy_hold_return": -0.04117,
+            "excess": -0.08227,
             "strategy_maxdd": -0.14082,
             "buy_hold_maxdd": -0.12343,
             "exposure": 0.5821
           },
           "1y": {
             "strategy_return": 0.19938,
-            "buy_hold_return": 0.4726,
-            "excess": -0.27321,
+            "buy_hold_return": 0.47204,
+            "excess": -0.27265,
             "strategy_maxdd": -0.14082,
             "buy_hold_maxdd": -0.12343,
             "exposure": 0.5821
           },
           "3y": {
             "strategy_return": 0.51164,
-            "buy_hold_return": 0.99823,
-            "excess": -0.48659,
+            "buy_hold_return": 0.99747,
+            "excess": -0.48583,
             "strategy_maxdd": -0.14082,
             "buy_hold_maxdd": -0.23098,
             "exposure": 0.5821
@@ -1920,24 +1995,24 @@
         "KAMA Cloud": {
           "6m": {
             "strategy_return": -0.08542,
-            "buy_hold_return": -0.0408,
-            "excess": -0.04461,
+            "buy_hold_return": -0.04117,
+            "excess": -0.04425,
             "strategy_maxdd": -0.10356,
             "buy_hold_maxdd": -0.12343,
             "exposure": 0.4226
           },
           "1y": {
             "strategy_return": 0.1125,
-            "buy_hold_return": 0.4726,
-            "excess": -0.36009,
+            "buy_hold_return": 0.47204,
+            "excess": -0.35954,
             "strategy_maxdd": -0.10356,
             "buy_hold_maxdd": -0.12343,
             "exposure": 0.4226
           },
           "3y": {
             "strategy_return": 0.31825,
-            "buy_hold_return": 0.99823,
-            "excess": -0.67998,
+            "buy_hold_return": 0.99747,
+            "excess": -0.67922,
             "strategy_maxdd": -0.10356,
             "buy_hold_maxdd": -0.23098,
             "exposure": 0.4226
@@ -1946,24 +2021,24 @@
         "Ibrida": {
           "6m": {
             "strategy_return": -0.0761,
-            "buy_hold_return": -0.0408,
-            "excess": -0.0353,
+            "buy_hold_return": -0.04117,
+            "excess": -0.03493,
             "strategy_maxdd": -0.09443,
             "buy_hold_maxdd": -0.12343,
             "exposure": 0.3519
           },
           "1y": {
             "strategy_return": 0.13899,
-            "buy_hold_return": 0.4726,
-            "excess": -0.33361,
+            "buy_hold_return": 0.47204,
+            "excess": -0.33305,
             "strategy_maxdd": -0.10914,
             "buy_hold_maxdd": -0.12343,
             "exposure": 0.3519
           },
           "3y": {
             "strategy_return": 0.27215,
-            "buy_hold_return": 0.99823,
-            "excess": -0.72608,
+            "buy_hold_return": 0.99747,
+            "excess": -0.72532,
             "strategy_maxdd": -0.10914,
             "buy_hold_maxdd": -0.23098,
             "exposure": 0.3519
@@ -1971,20 +2046,20 @@
         },
         "Buy & Hold": {
           "6m": {
-            "strategy_return": -0.0408,
-            "buy_hold_return": -0.0408,
+            "strategy_return": -0.04117,
+            "buy_hold_return": -0.04117,
             "strategy_maxdd": -0.12343,
             "exposure": 1
           },
           "1y": {
-            "strategy_return": 0.4726,
-            "buy_hold_return": 0.4726,
+            "strategy_return": 0.47204,
+            "buy_hold_return": 0.47204,
             "strategy_maxdd": -0.12343,
             "exposure": 1
           },
           "3y": {
-            "strategy_return": 0.99823,
-            "buy_hold_return": 0.99823,
+            "strategy_return": 0.99747,
+            "buy_hold_return": 0.99747,
             "strategy_maxdd": -0.23098,
             "exposure": 1
           }
@@ -1996,6 +2071,10 @@
       "name": "Amundi MSCI Europe Value Factor UCITS ETF EUR Acc",
       "category": "VALUE",
       "last_price": 478.45,
+      "data_quality": {
+        "removed_outlier_sessions": 0,
+        "dates": []
+      },
       "signals": {
         "Kamal5": 1,
         "KAMA Cloud": 1,
