@@ -1,5 +1,10 @@
 name: Update Strategy Lab
 on:
+  push:
+    paths:
+      - "scripts/build_strategies.py"
+      - "data/factor_universe.csv"
+      - ".github/workflows/strategies.yml"
   schedule:
     - cron: "30 22 * * 1-5"
   workflow_dispatch:
