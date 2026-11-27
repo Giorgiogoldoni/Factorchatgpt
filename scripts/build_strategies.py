@@ -23,7 +23,7 @@ def kama(s, n=10, fast=2, slow=30):
     return out
 
 def metrics(price, signal):
-    p=price.dropna(); sig=signal.reindex(p.index).fillna(0).astype(float)
+    p=price.dropna(); sig=signal.shift(1).reindex(p.index).fillna(0).astype(float)
     ret=p.pct_change().fillna(0); turnover=sig.diff().abs().fillna(sig.abs())
     strat=ret*sig-turnover*COST
     rows={}
