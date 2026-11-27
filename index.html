@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FactorChatGPT · ETF Factor Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#131e30;--line:#26364d;--muted:#9aabc2;--text:#edf4ff;--accent:#70c4b2}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#0b1220,#101b2c);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1180px;margin:auto;padding:28px 18px 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+h1{font-size:clamp(28px,5vw,44px);margin:8px 0}h2{font-size:20px;margin:0 0 14px}.sub,.muted{color:var(--muted)}.tag{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:24px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px}.num{font-size:27px;font-weight:750}.card small{color:var(--muted)}
+section{background:rgba(19,30,48,.8);border:1px solid var(--line);border-radius:16px;padding:20px;margin:18px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px 9px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600}td{vertical-align:top}.pill{display:inline-block;padding:3px 8px;border:1px solid #3b536d;border-radius:20px;font-size:12px;color:#c9d9ed}
+.note{border-left:3px solid var(--accent);padding:10px 14px;background:#102b30;border-radius:6px;color:#d9f3ed}
+@media(max-width:650px){main{padding:20px 12px}section{padding:14px;overflow-x:auto}table{min-width:720px}}
+</style></head>
+<body><main>
+<div class="top"><div><div class="tag">FactorChatGPT · Research Lab</div><h1>ETF Factor Dashboard</h1><div class="sub">Universo, momentum e strategie dinamiche per ETF factor UCITS</div></div><span class="pill">Versione iniziale · catalogo</span></div>
+<div class="grid">
+<div class="card"><div class="num">22</div><small>ETF censiti nel catalogo</small></div>
+<div class="card"><div class="num">5</div><small>Famiglie factor</small></div>
+<div class="card"><div class="num">3</div><small>Moduli strategici pianificati</small></div>
+<div class="card"><div class="num">—</div><small>Ultimo aggiornamento prezzi · da collegare</small></div>
+</div>
+<section><h2>Universo factor</h2><p class="muted">Il perimetro di ricerca resta circoscritto agli ETF elencati qui. I dati di prezzo, i segnali e i backtest saranno pubblicati solo dopo la verifica delle serie storiche e delle quotazioni.</p><div id="catalog">Caricamento catalogo…</div></section>
+<section><h2>Motore di analisi</h2><div class="grid">
+<div class="card"><b>Kamal5</b><p class="muted">Segnale breakout a 5 sedute, long/cash.</p></div>
+<div class="card"><b>KAMA Cloud</b><p class="muted">Nuvola multi-KAMA, direzione e contrazione.</p></div>
+<div class="card"><b>Strategia ibrida</b><p class="muted">Combinazione dei segnali con confronto Buy &amp; Hold e test out-of-sample.</p></div>
+</div><p class="note">Questa prima pubblicazione è la struttura del progetto: non mostra ancora segnali operativi né rendimenti non verificati.</p></section>
+<footer class="muted">FactorChatGPT · Ricerca quantitativa informativa · Non costituisce consulenza finanziaria.</footer>
+</main>
+<script>
+fetch('./data/factor_universe.csv').then(r=>{if(!r.ok)throw Error('CSV non disponibile');return r.text()}).then(t=>{
+const lines=t.trim().split(/\r?\n/), rows=lines.slice(1).map(l=>l.split(','));
+const cats=[...new Set(rows.map(r=>r[0]))];
+document.getElementById('catalog').innerHTML='<p class="muted">'+rows.length+' strumenti · '+cats.length+' categorie</p><table><thead><tr><th>Categoria</th><th>Ticker</th><th>ETF</th><th>ISIN</th><th>Area</th><th>Dividendi</th></tr></thead><tbody>'+rows.map(r=>'<tr>'+[r[0],r[1],r[2],r[3],r[4],r[7]].map(v=>'<td>'+v.replaceAll('&','&amp;').replaceAll('<','&lt;')+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
+}).catch(e=>document.getElementById('catalog').textContent='Catalogo non disponibile: '+e.message);
+</script></body></html>
