@@ -63,8 +63,8 @@ def add_indicators(z):
     z["viMinus"]=(l-h.shift()).abs().rolling(14).sum()/tr.rolling(14).sum()
     z["ao"]=mid.rolling(5).mean()-mid.rolling(34).mean()
     # Relative Vigor Index: smoothed weighted close-open / high-low, then signal SMA(4)
-    num=(2*(c-o)+(c.shift(1)-o.shift(1))+(c.shift(2)-o.shift(2))+(c.shift(3)-o.shift(3))/5
-    den=(2*(h-l)+(h.shift(1)-l.shift(1))+(h.shift(2)-l.shift(2))+(h.shift(3)-l.shift(3))/5
+    num=(2*(c-o)+(c.shift(1)-o.shift(1))+(c.shift(2)-o.shift(2))+(c.shift(3)-o.shift(3)))/5
+    den=(2*(h-l)+(h.shift(1)-l.shift(1))+(h.shift(2)-l.shift(2))+(h.shift(3)-l.shift(3)))/5
     z["rvgi"]=num.rolling(10).sum()/den.rolling(10).sum().replace(0,np.nan)
     z["rvgiSignal"]=z.rvgi.rolling(4).mean()
     prevhi=h.shift().rolling(5).max();prevlo=l.shift().rolling(5).min();state=0;ss=[]
