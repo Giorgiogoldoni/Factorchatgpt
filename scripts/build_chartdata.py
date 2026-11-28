@@ -2,7 +2,7 @@ import json,csv
 from pathlib import Path
 import numpy as np,pandas as pd,yfinance as yf
 
-MAP={"SPEQ":"SPEQ.MI","MWEQ":"MWEQ.MI","MEEQ":"MEEQ.MI","IEWQ":"IEWQ.MI","WELE":"WELE.MI","IWMO":"IWMO.MI","XDEM":"XDEM.MI","QDVA":"QDVA.DE","IEMO":"IEMO.MI","MCEU":"MCEU.MI","IWVL":"IWVL.MI","XDEV":"XDEV.MI","IEVL":"IEVL.MI","QDVI":"QDVI.DE","VCEU":"VCEU.MI","IWQU":"IWQU.MI","IEQU":"IEQU.MI","QDVB":"QDVB.DE","XDEQ":"XDEQ.MI","QCEU":"QCEU.MI","IAPD":"IAPD.MI","VHYA":"VHYA.MI"}
+MAP={"SPEQ":"SPEQ.MI","MWEQ":"MWEQ.MI","MEEQ":"MEEQ.MI","IEWQ":"IEWQ.MI","WELE":"WELE.MI","IWMO":"IWMO.MI","XDEM":"XDEM.MI","QDVA":"QDVA.DE","IEMO":"IEMO.MI","MCEU":"MCEU.PA","IWVL":"IWVL.MI","XDEV":"XDEV.MI","IEVL":"IEVL.MI","QDVI":"QDVI.DE","VCEU":"VCEU.MI","IWQU":"IWQU.MI","IEQU":"IEQU.MI","QDVB":"QDVB.DE","XDEQ":"XDEQ.MI","QCEU":"QCEU.MI","IAPD":"IAPD.MI","VHYA":"VHYA.MI"}
 
 def kama(s,n=10,fast=2,slow=30):
     change=s.diff(n).abs()
@@ -96,7 +96,7 @@ def main():
             z=z.dropna(subset=["Open","High","Low","Close"])
             z.columns=[str(x).lower() for x in z.columns]
             z=z[z.close>0].copy()
-            if len(z)<200:raise ValueError(f"Storico insufficiente: {len(z)} righe")
+            if len(z)<100:raise ValueError(f"Storico insufficiente: {len(z)} righe")
             # Non filtrare rendimenti estremi: eliminare barre di mercato altera il grafico.
             z=add_indicators(z)
             rows=[]
