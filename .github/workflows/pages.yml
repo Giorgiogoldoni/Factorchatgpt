@@ -16,6 +16,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Check Chart Lab JavaScript
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html=Path("charts.html").read_text(encoding="utf-8")
+          js=html.split("<script>",1)[1].split("</script>",1)[0]
+          Path("/tmp/chartlab.js").write_text(js,encoding="utf-8")
+          PY
+          node --check /tmp/chartlab.js
+      - name: Validate published feed
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("data/chartdata.json").read_text(encoding="utf-8"))
+          iwmo=next((x for x in data["assets"] if x["ticker"]=="IWMO.MI"),None)
+          assert iwmo is not None, "IWMO.MI missing from published feed"
+          assert len(iwmo["rows"]) >= 200, "IWMO data history too short"
+          assert {"rsi14","macd","macdSignal","macdHist","atr14","bbUpper","bbLower"} <= set(data["columns"]), "Technical indicator fields missing"
+          print("IWMO feed validation OK",len(iwmo["rows"]),"bars")
+          PY
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
