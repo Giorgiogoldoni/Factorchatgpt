@@ -20,7 +20,10 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install yfinance pandas numpy
+      - run: python -m py_compile scripts/build_chartdata.py
       - run: python scripts/build_chartdata.py
+      - name: Validate OHLC feed
+        run: python -c "import json; d=json.load(open('data/chartdata.json')); a=next(x for x in d['assets'] if x['ticker']=='IWMO.MI'); assert len(a['rows'])>=200; assert {'rsi14','macd','macdSignal','macdHist','atr14','bbUpper','bbLower'} <= set(d['columns']); print('Feed valid; IWMO bars:',len(a['rows']))"
       - name: Commit OHLC data
         run: |
           git config user.name "github-actions[bot]"
