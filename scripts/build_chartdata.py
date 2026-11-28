@@ -38,7 +38,7 @@ def add_indicators(z):
     for n in (20,55):
         z[f"d{n}h"]=h.shift(1).rolling(n).max();z[f"d{n}l"]=l.shift(1).rolling(n).min()
     for n in (20,50,200):z[f"ema{n}"]=c.ewm(span=n,adjust=False).mean()
-    mid=(h+l)/2;z["jaw"]=smma(mid,13);z["teeth"]=smma(mid,8);z["lips"]=smma(mid,5)
+    mid=(h+l)/2;z["jaw"]=smma(mid,13).shift(8);z["teeth"]=smma(mid,8).shift(5);z["lips"]=smma(mid,5).shift(3)
     # Parabolic SAR approximation: trend state, acceleration factor, prior two-bar constraints
     sar=[];bull=True;ep=h.iloc[0];cur=l.iloc[0];af=.02
     for i in range(len(z)):
