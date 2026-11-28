@@ -108,7 +108,7 @@ def main():
         except Exception as e:
             errors.append(f"{t}: {e}")
             print("SKIP",t,str(e))
-    if not assets:raise RuntimeError("Nessuna serie OHLC generata")
+    if not assets:raise RuntimeError("Nessuna serie OHLC generata")\n    if not any(a["ticker"]=="IWMO.MI" for a in assets):raise RuntimeError("IWMO.MI assente dal feed: interrompo il build")
     output={"updated":pd.Timestamp.now("UTC").isoformat(),"columns":["date"]+fields,"assets":assets,"errors":errors}
     Path("data").mkdir(exist_ok=True)
     Path("data/chartdata.json").write_text(json.dumps(output,ensure_ascii=False,separators=(",",":")),encoding="utf-8")
